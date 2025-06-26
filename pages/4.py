@@ -30,7 +30,7 @@ st.markdown(f"""
             background-color: rgba(255, 255, 255, 0.92);
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.92);
             width: 100%;
             max-width: 700px;
             margin: 40px auto;
