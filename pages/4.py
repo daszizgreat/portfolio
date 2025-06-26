@@ -23,6 +23,9 @@ st.markdown(f"""
             background: url("data:image/jpg;base64,{img_base64}") no-repeat center center fixed;
             background-size: cover;
         }}
+        * {{
+            color: #000 !important;
+        }}
         .content-box {{
             background-color: rgba(255, 255, 255, 0.92);
             padding: 30px;
@@ -36,17 +39,19 @@ st.markdown(f"""
         .content-box h3 {{
             text-align: center;
             margin-bottom: 20px;
+            color: #000;
         }}
         .content-box p {{
             margin: 10px 0;
             line-height: 1.7;
+            color: #000;
         }}
         .content-box a {{
-            color: #1a73e8;
-            text-decoration: none;
+            color: #000 !important;
+            text-decoration: underline;
         }}
         .content-box a:hover {{
-            text-decoration: underline;
+            color: #333;
         }}
         .bottom-link {{
             margin-top: 30px;
@@ -55,8 +60,17 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
+# === Hide Sidebar ===
+st.markdown("""
+    <style>
+        [data-testid="stSidebar"] {
+            display: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # === Internship Section ===
-st.markdown(f"""
+st.markdown("""
     <div class="content-box">
         <h3>💼 Internship at Aspireit (May 2024 – Aug 2024)</h3>
         <p>
@@ -68,15 +82,9 @@ st.markdown(f"""
         </p>
     </div>
 """, unsafe_allow_html=True)
-st.markdown("""
-    <style>
-        [data-testid="stSidebar"] {
-            display: none;
-        }
-    </style>
-""", unsafe_allow_html=True)
+
 # === LeetCode Progress Section ===
-st.markdown(f"""
+st.markdown("""
     <div class="content-box">
         <h3>🧠 LeetCode Progress</h3>
         <p>
@@ -91,7 +99,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # === Contact Section ===
-st.markdown(f"""
+st.markdown("""
     <div class="content-box">
         <h3>📞 Let's Connect</h3>
         <p><strong>📍 Address:</strong> B-214, Dankuni Coal Complex Township, Hooghly, West Bengal – 712310</p>
@@ -100,23 +108,14 @@ st.markdown(f"""
         <p><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/soumyadeep-das-11717b239" target="_blank">soumyadeep-das-11717b239</a></p>
         <p><strong>🐙 GitHub:</strong> <a href="https://github.com/daszizgreat" target="_blank">github.com/daszizgreat</a></p>
         <div class="bottom-link">
-            <a href="http://localhost:8501/5" target="_self">👉 Continue to Next Page</a>
+            <a href="/5" target="_self">👉 Continue to Next Page</a>
         </div>
     </div>
 """, unsafe_allow_html=True)
-# --- Custom CSS ---
+
+# === Taskbar ===
 st.markdown("""
     <style>
-       
-
-
-        .nav-button:hover {
-            background: rgba(0,0,0);
-            color: #000000;
-            transform: scale(1.05);
-        }
-
-        /* Taskbar buttons */
         .taskbar {
             display: flex;
             justify-content: center;
@@ -130,7 +129,6 @@ st.markdown("""
             box-shadow: 0 8px 30px rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
-
         .taskbar a {
             text-decoration: none;
             padding: 12px 28px;
@@ -142,24 +140,18 @@ st.markdown("""
             transition: all 0.25s ease;
             border: 1px solid rgba(255, 255, 255, 0.12);
         }
-
         .taskbar a:hover {
             background: rgba(255, 255, 255, 0.1);
             color: #ffffff;
         }
     </style>
-""", unsafe_allow_html=True)
-
-
-# --- Taskbar with 7 Buttons ---
-st.markdown("""
-<div class="taskbar">
-    <a href="/">🏠 Home</a>
-    <a href="/3" target="_self">🎓 Education</a>
-    <a href="/2" target="_self">🛠️ Skills</a>
-    <a href="/5" target="_self">🚀 Projects</a>
-    <a href="/6" target="_self">📜 Certificates</a>
-    <a href="/1" target="_self">🎯 Clubs</a>
-    <a href="/4" target="_self">💼 Internship</a>
-</div>
+    <div class="taskbar">
+        <a href="/">🏠 Home</a>
+        <a href="/3" target="_self">🎓 Education</a>
+        <a href="/2" target="_self">🛠️ Skills</a>
+        <a href="/5" target="_self">🚀 Projects</a>
+        <a href="/6" target="_self">📜 Certificates</a>
+        <a href="/1" target="_self">🎯 Clubs</a>
+        <a href="/4" target="_self">💼 Internship</a>
+    </div>
 """, unsafe_allow_html=True)
